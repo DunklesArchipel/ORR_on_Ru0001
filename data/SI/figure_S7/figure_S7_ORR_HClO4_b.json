@@ -1,0 +1,420 @@
+{
+    "resources": [
+        {
+            "name": "figure_s7_orr_hclo4_b",
+            "type": "table",
+            "path": "figure_S7_ORR_HClO4_b.csv",
+            "scheme": "file",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "t",
+                        "type": "number",
+                        "description": "relative time",
+                        "unit": "s"
+                    },
+                    {
+                        "name": "E",
+                        "type": "number",
+                        "description": "WE potential",
+                        "unit": "V",
+                        "reference": "RHE"
+                    },
+                    {
+                        "name": "current1_mA",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "mA"
+                    },
+                    {
+                        "name": "coll_current",
+                        "type": "number",
+                        "description": "collector electrode current",
+                        "unit": "mA"
+                    },
+                    {
+                        "name": "potential2",
+                        "type": "any",
+                        "description": "collector electrode potential",
+                        "unit": "V"
+                    },
+                    {
+                        "name": "current1",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "A"
+                    },
+                    {
+                        "name": "current1_muA",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "cur1muA_filt",
+                        "type": "number",
+                        "description": "WE current smoothed with a median filter (5 points)",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "coll_cur_filt",
+                        "type": "number",
+                        "description": "collector current smoothed with a median filter (5 points)",
+                        "unit": "A"
+                    },
+                    {
+                        "name": "coll_cur_norm",
+                        "type": "number",
+                        "description": "collector current adjusted with a timeshift with respect to the WE current",
+                        "unit": "A"
+                    },
+                    {
+                        "name": "coll_cur_norm_filt",
+                        "type": "number",
+                        "description": "collector current adjusted with a timeshift with respect to the WE current and smoothed with a median filter (5 points)",
+                        "unit": "A"
+                    },
+                    {
+                        "name": "cur_H2O2",
+                        "type": "number",
+                        "description": "H2O2-CV - H2O2 partial current of the ORR current",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "cur_H2O2_min",
+                        "type": "number",
+                        "description": "smallest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "cur_H2O2_max",
+                        "type": "number",
+                        "description": "largest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "yield",
+                        "type": "number",
+                        "description": "H2O2 yields in percent"
+                    },
+                    {
+                        "name": "yield_min",
+                        "type": "number",
+                        "description": "smallest H2O2-yield after taking into account all errors from the evaluation, see manuscript for details"
+                    },
+                    {
+                        "name": "yield_max",
+                        "type": "number",
+                        "description": "largest H2O2-yield after taking into account all errors from the evaluation, see manuscript for details"
+                    },
+                    {
+                        "name": "j",
+                        "type": "number",
+                        "description": "WE current density",
+                        "unit": "uA cm-2"
+                    },
+                    {
+                        "name": "current1_mA_geo",
+                        "type": "number",
+                        "description": "WE current density",
+                        "unit": "mA cn-2"
+                    },
+                    {
+                        "name": "cur_H2O2_uAcm",
+                        "type": "number",
+                        "description": "H2O2-CV - H2O2 partial current density of the ORR current",
+                        "unit": "uA cm-2"
+                    },
+                    {
+                        "name": "cur_H2O2_min_uAcm",
+                        "type": "number",
+                        "description": "smallest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details",
+                        "unit": "uA cm-2"
+                    },
+                    {
+                        "name": "cur_H2O2_max_uAcm",
+                        "type": "number",
+                        "description": "largest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details",
+                        "unit": "uA cm-2"
+                    }
+                ]
+            },
+            "metadata": {
+                "echemdb": {
+                    "experimental": {
+                        "tags": "ORR",
+                        "instrumentation": [
+                            {
+                                "name": "potentiostat",
+                                "manufacturer": "Pine instruments",
+                                "model": "AFCBP-1",
+                                "type": "bipotentiostat"
+                            }
+                        ]
+                    },
+                    "system": {
+                        "type": "electrochemical",
+                        "electrodes": [
+                            {
+                                "name": "REF",
+                                "function": "reference electrode",
+                                "source": {
+                                    "manufacturer": "homemade"
+                                },
+                                "type": "RHE"
+                            },
+                            {
+                                "name": "WE",
+                                "function": "working electrode",
+                                "crystallographic orientation": "0001",
+                                "material": "Ru",
+                                "preparation procedure": {
+                                    "description": [
+                                        "Under UHV conditions",
+                                        "Sputtering and flash annealing to 1600 K with repeated cycles of oxygen adsorption and desorption."
+                                    ]
+                                },
+                                "shape": {
+                                    "height": {
+                                        "unit": "mm",
+                                        "value": 2
+                                    },
+                                    "diameter": {
+                                        "unit": "mm",
+                                        "value": 12
+                                    },
+                                    "type": "hat shaped"
+                                },
+                                "geometric electrolyte contact area": {
+                                    "value": 0.3848451,
+                                    "unit": "cm-2"
+                                },
+                                "source": {
+                                    "manufacturer": "MaTecK"
+                                },
+                                "comment": "The electrode contact area is determined by the inner diameter of the O-ring of the electrochemical cell."
+                            },
+                            {
+                                "name": "CE",
+                                "function": "counter electrode",
+                                "material": "Au"
+                            }
+                        ],
+                        "electrochemical cell": {
+                            "type": "flow cell",
+                            "components": [
+                                {
+                                    "name": "Kel-F",
+                                    "part": "cell body"
+                                },
+                                {
+                                    "name": "PFA",
+                                    "part": "tubings"
+                                },
+                                {
+                                    "name": "glass",
+                                    "part": "electrolyte supply bottle"
+                                }
+                            ],
+                            "cell description": "A dual layer flow cell for DEMS or Collector electrode measurements.",
+                            "cleaning procedure": "Storing in highly concentrated KOH and boiling in Milli-Q water.",
+                            "source": {
+                                "url": "https://doi.org/10.1039/C6CP06051J"
+                            }
+                        },
+                        "electrolyte": {
+                            "components": [
+                                {
+                                    "name": "H2O",
+                                    "proportion": {
+                                        "unit": "volume percent",
+                                        "value": 100
+                                    },
+                                    "purity": {
+                                        "total ion conductivity": {
+                                            "value": 18,
+                                            "unit": "MOhm cm"
+                                        }
+                                    },
+                                    "type": "solvent"
+                                },
+                                {
+                                    "name": "HClO4",
+                                    "concentration": {
+                                        "unit": "mol / l",
+                                        "value": 0.1
+                                    },
+                                    "source": {
+                                        "supplier": "Merck"
+                                    },
+                                    "type": "acid"
+                                },
+                                {
+                                    "name": "O2",
+                                    "type": "gas",
+                                    "purity": {
+                                        "grade": "6.0"
+                                    },
+                                    "source": {
+                                        "supplier": "MTI"
+                                    },
+                                    "partial pressure": {
+                                        "unit": 1,
+                                        "value": "bar"
+                                    },
+                                    "proportion": {
+                                        "value": 100
+                                    }
+                                }
+                            ],
+                            "temperature": {
+                                "unit": "K",
+                                "value": 298.15
+                            },
+                            "comment": "The given temperature refers to room temperature.",
+                            "type": "aqueous"
+                        }
+                    },
+                    "source": {
+                        "citation key": "engstfeld_2024_impact_0000",
+                        "url": null
+                    },
+                    "curation": {
+                        "process": [
+                            {
+                                "role": "experimentalist",
+                                "name": "Albert Engstfeld",
+                                "orcid": "https://orcid.org/0000-0002-9686-3948",
+                                "date": "2018-01-01"
+                            },
+                            {
+                                "role": "curator",
+                                "name": "Albert Engstfeld",
+                                "orcid": "https://orcid.org/0000-0002-9686-3948",
+                                "date": "2024-02-01"
+                            }
+                        ]
+                    },
+                    "figure description": {
+                        "type": "processed",
+                        "simultaneous measurement": "ring disc",
+                        "fields": [
+                            {
+                                "name": "t",
+                                "unit": "s",
+                                "description": "relative time"
+                            },
+                            {
+                                "name": "E",
+                                "unit": "V",
+                                "description": "WE potential",
+                                "reference": "RHE"
+                            },
+                            {
+                                "name": "current1_mA",
+                                "unit": "mA",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "coll_current",
+                                "unit": "mA",
+                                "description": "collector electrode current"
+                            },
+                            {
+                                "name": "potential2",
+                                "unit": "V",
+                                "description": "collector electrode potential"
+                            },
+                            {
+                                "name": "current1",
+                                "unit": "A",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "current1_muA",
+                                "unit": "uA",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "cur1muA_filt",
+                                "unit": "uA",
+                                "description": "WE current smoothed with a median filter (5 points)"
+                            },
+                            {
+                                "name": "coll_cur_filt",
+                                "unit": "A",
+                                "description": "collector current smoothed with a median filter (5 points)"
+                            },
+                            {
+                                "name": "coll_cur_norm",
+                                "unit": "A",
+                                "description": "collector current adjusted with a timeshift with respect to the WE current"
+                            },
+                            {
+                                "name": "coll_cur_norm_filt",
+                                "unit": "A",
+                                "description": "collector current adjusted with a timeshift with respect to the WE current and smoothed with a median filter (5 points)"
+                            },
+                            {
+                                "name": "cur_H2O2",
+                                "unit": "uA",
+                                "description": "H2O2-CV - H2O2 partial current of the ORR current"
+                            },
+                            {
+                                "name": "cur_H2O2_min",
+                                "unit": "uA",
+                                "description": "smallest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "cur_H2O2_max",
+                                "unit": "uA",
+                                "description": "largest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "cur_H2O2_uAcm",
+                                "unit": "uA cm-2",
+                                "description": "H2O2-CV - H2O2 partial current density of the ORR current"
+                            },
+                            {
+                                "name": "cur_H2O2_min_uAcm",
+                                "unit": "uA cm-2",
+                                "description": "smallest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "cur_H2O2_max_uAcm",
+                                "unit": "uA cm-2",
+                                "description": "largest H2O2-CV after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "yield",
+                                "description": "H2O2 yields in percent"
+                            },
+                            {
+                                "name": "yield_min",
+                                "description": "smallest H2O2-yield after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "yield_max",
+                                "description": "largest H2O2-yield after taking into account all errors from the evaluation, see manuscript for details"
+                            },
+                            {
+                                "name": "j",
+                                "unit": "uA cm-2",
+                                "description": "WE current density"
+                            },
+                            {
+                                "name": "current1_mA_geo",
+                                "unit": "mA cn-2",
+                                "description": "WE current density"
+                            }
+                        ]
+                    },
+                    "measurement type": "CV"
+                }
+            }
+        }
+    ]
+}

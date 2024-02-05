@@ -1,0 +1,514 @@
+{
+    "resources": [
+        {
+            "name": "figure_s6_bcv_dems_hclo4_b",
+            "type": "table",
+            "path": "figure_S6_BCV_DEMS_HClO4_b.csv",
+            "scheme": "file",
+            "format": "csv",
+            "mediatype": "text/csv",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "t",
+                        "type": "number",
+                        "description": "relative time",
+                        "unit": "s"
+                    },
+                    {
+                        "name": "ion_current_M2",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "E",
+                        "type": "number",
+                        "description": "WE potential",
+                        "unit": "V",
+                        "reference": "RHE"
+                    },
+                    {
+                        "name": "current1_mA",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "mA"
+                    },
+                    {
+                        "name": "coll_current",
+                        "type": "any",
+                        "description": "collector electrode current",
+                        "unit": "mA"
+                    },
+                    {
+                        "name": "current1",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "A"
+                    },
+                    {
+                        "name": "current1_muA",
+                        "type": "number",
+                        "description": "WE current",
+                        "unit": "uA"
+                    },
+                    {
+                        "name": "ion_current_M2_sBG_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by simply removing the last datapoint from the original curve (sB - simple background).",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_sBG_ALS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M2_sBG_sub curve, determined with an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_sBG_ALS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by removing the last datapoint from the original curve and removing the ion_current_M2_sBG_ALS curve.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_ALS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M2 curve, determined with an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_UVS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M2 curve, determined with a univariate spline.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_UVS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_UVS curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_UVS_ALS",
+                        "type": "number",
+                        "description": "Background for ion_current_M2 curve, determined from a univariate spline and an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_UVS_ALS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_UVS_ALS curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_MF",
+                        "type": "number",
+                        "description": "Background for ion_current_M2 curve, determined from applying a median filter, averaging over significant portion of the datapoints, which flattens any kind of signals.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M2_MF_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_MF curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_sBG_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by simply removing the last datapoint from the original curve (sB - simple background).",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_sBG_ALS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M32_sBG_sub curve, determined with an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_sBG_ALS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by removing the last datapoint from the original curve and removing the ion_current_M32_sBG_ALS curve.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_ALS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M32 curve, determined with an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_UVS",
+                        "type": "number",
+                        "description": "Background for the ion_current_M32 curve, determined with a univariate spline.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_UVS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_UVS curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_UVS_ALS",
+                        "type": "number",
+                        "description": "Background for ion_current_M32 curve, determined from a univariate spline and an asymmetric least square approach.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_UVS_ALS_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_UVS_ALS curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_MF",
+                        "type": "number",
+                        "description": "Background for ion_current_M32 curve, determined from applying a median filter, averaging over significant portion of the datapoints, which flattens any kind of signals.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "ion_current_M32_MF_sub",
+                        "type": "number",
+                        "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_MF curve was removed.",
+                        "unit": "nA"
+                    },
+                    {
+                        "name": "j",
+                        "type": "number",
+                        "description": "WE current density",
+                        "unit": "uA cm-2"
+                    },
+                    {
+                        "name": "current1_mA_geo",
+                        "type": "number",
+                        "description": "WE current density",
+                        "unit": "mA cn-2"
+                    }
+                ]
+            },
+            "metadata": {
+                "echemdb": {
+                    "experimental": {
+                        "tags": "BCV",
+                        "instrumentation": [
+                            {
+                                "name": "potentiostat",
+                                "manufacturer": "Pine instruments",
+                                "model": "AFRDE5",
+                                "type": "bipotentiostat"
+                            }
+                        ]
+                    },
+                    "system": {
+                        "type": "electrochemical",
+                        "electrodes": [
+                            {
+                                "name": "REF",
+                                "function": "reference electrode",
+                                "source": {
+                                    "manufacturer": "homemade"
+                                },
+                                "type": "RHE"
+                            },
+                            {
+                                "name": "WE",
+                                "function": "working electrode",
+                                "crystallographic orientation": "0001",
+                                "material": "Ru",
+                                "preparation procedure": {
+                                    "description": [
+                                        "Under UHV conditions",
+                                        "Sputtering and flash annealing to 1600 K with repeated cycles of oxygen adsorption and desorption."
+                                    ]
+                                },
+                                "shape": {
+                                    "height": {
+                                        "unit": "mm",
+                                        "value": 2
+                                    },
+                                    "diameter": {
+                                        "unit": "mm",
+                                        "value": 12
+                                    },
+                                    "type": "hat shaped"
+                                },
+                                "geometric electrolyte contact area": {
+                                    "value": 0.3848451,
+                                    "unit": "cm-2"
+                                },
+                                "source": {
+                                    "manufacturer": "MaTecK"
+                                },
+                                "comment": "The electrode contact area is determined by the inner diameter of the O-ring of the electrochemical cell."
+                            },
+                            {
+                                "name": "CE",
+                                "function": "counter electrode",
+                                "material": "Au"
+                            }
+                        ],
+                        "electrochemical cell": {
+                            "type": "flow cell",
+                            "components": [
+                                {
+                                    "name": "Kel-F",
+                                    "part": "cell body"
+                                },
+                                {
+                                    "name": "PFA",
+                                    "part": "tubings"
+                                },
+                                {
+                                    "name": "glass",
+                                    "part": "electrolyte supply bottle"
+                                }
+                            ],
+                            "cell description": "A dual layer flow cell for DEMS or Collector electrode measurements.",
+                            "cleaning procedure": "Storing in highly concentrated KOH and boiling in Milli-Q water.",
+                            "source": {
+                                "url": "https://doi.org/10.1039/C6CP06051J"
+                            }
+                        },
+                        "electrolyte": {
+                            "components": [
+                                {
+                                    "name": "H2O",
+                                    "proportion": {
+                                        "unit": "volume percent",
+                                        "value": 100
+                                    },
+                                    "purity": {
+                                        "total ion conductivity": {
+                                            "value": 18,
+                                            "unit": "MOhm cm"
+                                        }
+                                    },
+                                    "type": "solvent"
+                                },
+                                {
+                                    "name": "HClO4",
+                                    "concentration": {
+                                        "unit": "mol / l",
+                                        "value": 0.1
+                                    },
+                                    "source": {
+                                        "supplier": "Merck"
+                                    },
+                                    "type": "acid"
+                                },
+                                {
+                                    "name": "N2",
+                                    "type": "gas",
+                                    "source": {
+                                        "supplier": "Westfalen"
+                                    },
+                                    "purity": {
+                                        "grade": "6.0"
+                                    },
+                                    "partial pressure": {
+                                        "unit": 1,
+                                        "value": "bar"
+                                    },
+                                    "proportion": {
+                                        "value": 100
+                                    }
+                                }
+                            ],
+                            "temperature": {
+                                "unit": "K",
+                                "value": 298.15
+                            },
+                            "comment": "The given temperature refers to room temperature.",
+                            "type": "aqueous"
+                        }
+                    },
+                    "source": {
+                        "citation key": "engstfeld_2024_impact_0000",
+                        "url": null
+                    },
+                    "curation": {
+                        "process": [
+                            {
+                                "role": "experimentalist",
+                                "name": "Albert Engstfeld",
+                                "orcid": "https://orcid.org/0000-0002-9686-3948",
+                                "date": "2018-01-01"
+                            },
+                            {
+                                "role": "curator",
+                                "name": "Albert Engstfeld",
+                                "orcid": "https://orcid.org/0000-0002-9686-3948",
+                                "date": "2024-02-01"
+                            }
+                        ]
+                    },
+                    "figure description": {
+                        "type": "processed",
+                        "simultaneous measurement": "DEMS",
+                        "fields": [
+                            {
+                                "name": "t",
+                                "unit": "s",
+                                "description": "relative time"
+                            },
+                            {
+                                "name": "E",
+                                "unit": "V",
+                                "description": "WE potential",
+                                "reference": "RHE"
+                            },
+                            {
+                                "name": "current1_mA",
+                                "unit": "mA",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "coll_current",
+                                "unit": "mA",
+                                "description": "collector electrode current"
+                            },
+                            {
+                                "name": "current1",
+                                "unit": "A",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "current1_muA",
+                                "unit": "uA",
+                                "description": "WE current"
+                            },
+                            {
+                                "name": "j",
+                                "unit": "uA cm-2",
+                                "description": "WE current density"
+                            },
+                            {
+                                "name": "current1_mA_geo",
+                                "unit": "mA cn-2",
+                                "description": "WE current density"
+                            },
+                            {
+                                "name": "ion_current_M2",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram."
+                            },
+                            {
+                                "name": "ion_current_M2_sBG_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by simply removing the last datapoint from the original curve (sB - simple background)."
+                            },
+                            {
+                                "name": "ion_current_M2_sBG_ALS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M2_sBG_sub curve, determined with an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M2_sBG_ALS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by removing the last datapoint from the original curve and removing the ion_current_M2_sBG_ALS curve."
+                            },
+                            {
+                                "name": "ion_current_M2_ALS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M2 curve, determined with an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M2_UVS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M2 curve, determined with a univariate spline."
+                            },
+                            {
+                                "name": "ion_current_M2_UVS_ALS",
+                                "unit": "nA",
+                                "description": "Background for ion_current_M2 curve, determined from a univariate spline and an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M2_UVS_ALS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_UVS_ALS curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M2_UVS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_UVS curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M2_MF_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M2_MF curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M2_MF",
+                                "unit": "nA",
+                                "description": "Background for ion_current_M2 curve, determined from applying a median filter, averaging over significant portion of the datapoints, which flattens any kind of signals."
+                            },
+                            {
+                                "name": "ion_current_M32",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram."
+                            },
+                            {
+                                "name": "ion_current_M32_sBG_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by simply removing the last datapoint from the original curve (sB - simple background)."
+                            },
+                            {
+                                "name": "ion_current_M32_sBG_ALS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M32_sBG_sub curve, determined with an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M32_sBG_ALS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where a background was adjusted by removing the last datapoint from the original curve and removing the ion_current_M32_sBG_ALS curve."
+                            },
+                            {
+                                "name": "ion_current_M32_ALS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M32 curve, determined with an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M32_UVS",
+                                "unit": "nA",
+                                "description": "Background for the ion_current_M32 curve, determined with a univariate spline."
+                            },
+                            {
+                                "name": "ion_current_M32_UVS_ALS",
+                                "unit": "nA",
+                                "description": "Background for ion_current_M32 curve, determined from a univariate spline and an asymmetric least square approach."
+                            },
+                            {
+                                "name": "ion_current_M32_UVS_ALS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_UVS_ALS curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M32_UVS_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_UVS curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M32_MF_sub",
+                                "unit": "nA",
+                                "description": "Ion current for the mass cyclic voltammogram, where the ion_current_M32_MF curve was removed."
+                            },
+                            {
+                                "name": "ion_current_M32_MF",
+                                "unit": "nA",
+                                "description": "Background for ion_current_M32 curve, determined from applying a median filter, averaging over significant portion of the datapoints, which flattens any kind of signals."
+                            }
+                        ]
+                    },
+                    "measurement type": "CV"
+                }
+            }
+        }
+    ]
+}
