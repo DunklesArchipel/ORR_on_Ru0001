@@ -1,0 +1,11 @@
+# This file lists the dependencies needed to build and test all of svgdigitizer.
+# Create a conda environment with these dependencies preinstalled with:
+# conda env create -f environment.yml
+name: ru-orr
+channels:
+  - conda-forge
+dependencies:
+  - jupyter
+  - pip
+  - pip:
+    - unitpackage>=0.7.1,<0.8.0
