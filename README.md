@@ -1,4 +1,6 @@
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10623367.svg)](https://doi.org/10.5281/zenodo.10623367)
+
 This project contains the evaluated data files for the article
 "Impact of the potential dependent surface adlayer composition on the ORR activity and H2O2 formation on Ru(0001) in acid electrolytes".
 
